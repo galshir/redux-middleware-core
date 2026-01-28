@@ -1,5 +1,5 @@
 {
-    "name": "simple-redux-middleware",
+    "name": "core-redux-middleware",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
