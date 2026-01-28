@@ -1,7 +1,7 @@
 import { Store, Dispatch, Action } from "redux";
 import axios, { Method, AxiosRequestHeaders } from "axios";
 
-interface SimpleAction extends Action {
+interface ReduxApiAction extends Action {
     api: ApiAction;
 }
 
@@ -19,7 +19,7 @@ interface ApiAction {
 export const middleware =
     ({ dispatch }: Store) =>
     (next: Dispatch) =>
-    (action: SimpleAction) => {
+    (action: ReduxApiAction) => {
         next(action);
         if (action.api) {
             performApiCall(action.api, dispatch);
